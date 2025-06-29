@@ -1,15 +1,25 @@
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
-
-# Compiled output
+# Angular build artifacts
 /dist
 /tmp
 /out-tsc
 /bazel-out
+/.angular/cache
+/.angular/config.json
 
 # Node
 /node_modules
-npm-debug.log
-yarn-error.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Coverage reports
+/coverage
+
+# Compiled files
+*.js
+*.d.ts
+*.js.map
+*.tsbuildinfo
 
 # IDEs and editors
 .idea/
@@ -19,6 +29,7 @@ yarn-error.log
 *.launch
 .settings/
 *.sublime-workspace
+*.code-workspace
 
 # Visual Studio Code
 .vscode/*
@@ -26,16 +37,20 @@ yarn-error.log
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.history/*
 
-# Miscellaneous
-/.angular/cache
-.sass-cache/
+# Optional: if you're using Prettier
+.prettierignore
+
+# Optional: ESLint cache
+.eslintcache
+
+# Misc
 /connect.lock
-/coverage
 /libpeerconnection.log
 testem.log
-/typings
+.typings
+.sass-cache/
+.history/
 
 # System files
 .DS_Store
