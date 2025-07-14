@@ -1,0 +1,67 @@
+.header {
+  background-image: var(--bg-gradient-base);
+  color: var(--light-text-color);
+  display: flex;
+  height: clamp(64px, 10vh, 120px);
+  justify-content: center;
+  width: 100%;
+}
+
+.header-wrapper {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: relative;
+}
+
+.headers-btn-wrapper {
+  display: flex;
+  gap: 50px;
+}
+
+.logo {
+  height: 180%;
+  position: absolute;
+  top: 5px;
+  width: auto;
+}
+
+.user-btn,
+.search-btn {
+  background: none;
+  cursor: pointer;
+  height: 25px;
+  opacity: 0.7;
+  position: relative;
+  transition: opacity 0.3s ease;
+  width: 25px;
+}
+
+.user-btn:hover,
+.search-btn:hover {
+  opacity: 1;
+}
+
+.user-btn app-svg-icon {
+  aspect-ratio: 1;
+  position: relative;
+  width: 25px;
+  z-index: 1;
+}
+
+.user-btn.active::after,
+.user-btn.active:hover::after {
+  background-color: var(--primary-text-color);
+  border-radius: 50%;
+  content: '';
+  height: 36px;
+  left: 50%;
+  outline: 1px solid var(--light-text-color);
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  z-index: 0;
+}

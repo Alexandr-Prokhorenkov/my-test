@@ -1,0 +1,45 @@
+:host {
+  display: flex;
+  height: 100%;
+}
+
+.support-info {
+  position: relative;
+
+  .kompas-logo-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .logo-link {
+      .kompas-logo {
+        width: 60%;
+      }
+    }
+
+    .kompas-logo-text {
+      font-size: 18px;
+      font-weight: var(--font-weight-light);
+    }
+  }
+
+  .minpromtorg-logo-wrapper {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: absolute;
+    top: 70px;
+
+    .minpromtorg-logo {
+      height: auto;
+      width: 70px;
+    }
+
+    .minpromtorg-logo-text {
+      font-size: 18px;
+      font-weight: var(--font-weight-light);
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+  }
+}

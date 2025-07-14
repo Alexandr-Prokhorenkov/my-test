@@ -1,7 +1,7 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
@@ -18,10 +18,20 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "lib": ["ES2022", "dom"],
+    "paths": {
+      "@app/*": ["src/01-app/*"],
+      "@pages/*": ["src/02-pages/*"],
+      "@x/pages/*": ["src/02-pages/*"],
+      "@widgets/*": ["src/03-widgets/*"],
+      "@x/widgets/*": ["src/03-widgets/*"],
+      "@features/*": ["src/04-features/*"],
+      "@x/features/*": ["src/04-features/*"],
+      "@entities/*": ["src/05-entities/*"],
+      "@x/entities/*": ["src/05-entities/*"],
+      "@shared/*": ["src/06-shared/*"],
+      "@x/shared/*": ["src/06-shared/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
@@ -29,5 +39,5 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true
   },
-   "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts"]
 }

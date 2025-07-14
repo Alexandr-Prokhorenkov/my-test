@@ -1,0 +1,23 @@
+@import url('./06-shared/styles/_fonts.scss');
+@import url('./06-shared/styles/_reset.scss');
+@import url('./06-shared/styles/_variables.scss');
+
+body {
+  color: var(--primary-text-color);
+  font-family: var(--font-family-base);
+  font-weight: 400;
+}
+
+.container {
+  box-sizing: border-box;
+  margin-inline: auto;
+  max-width: 1200px;
+  padding-inline: 16px;
+  width: 100%;
+}
+
+.logo-link {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}

@@ -1,0 +1,18 @@
+:root {
+  --dark-text-color: #000;
+  --light-text-color: #fff;
+  --primary-text-color: #2d4051;
+  --font-family-base: 'Roboto', sans-serif;
+  --font-weight-thin: 100;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+  --font-size-base: 15px;
+  --font-size-xl: 20px;
+  --bg-gradient-base: linear-gradient(to right, #1f2c38 0%, #1f2c38 30%, #5986a3 100%);
+  --bg-gradient-base-reverse: linear-gradient(to left, #1f2c38 0%, #1f2c38 20%, #5986a3 100%);
+}

@@ -1,0 +1,12 @@
+<nav class="header-nav">
+  @for (item of menuItems; track item.route) {
+    <a
+      class="menu-item"
+      [routerLink]="item.route"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="item.linkActiveOptions"
+    >
+      {{ item.label }}
+    </a>
+  }
+</nav>
