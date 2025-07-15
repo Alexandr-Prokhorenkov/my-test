@@ -5,6 +5,10 @@
   position: relative;
   z-index: 0;
 
+  .container {
+    mix-blend-mode: screen;
+  }
+
   .title {
     color: var(--light-text-color);
     font-size: 40px;
@@ -16,15 +20,14 @@
     flex-direction: column;
     gap: 20px;
     padding-top: 80px;
+    padding-left: 30px;
   }
 
   .image-wrapper {
-    background-image: var(--bg-gradient-base);
     position: relative;
 
     .slide-image {
       height: 100%;
-      mix-blend-mode: screen;
       object-fit: cover;
       width: 100%;
     }
