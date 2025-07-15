@@ -22,10 +22,11 @@
 }
 
 .logo {
-  height: 180%;
+  height: 160px;
   position: absolute;
   top: 5px;
   width: auto;
+  z-index: 2;
 }
 
 .user-btn,

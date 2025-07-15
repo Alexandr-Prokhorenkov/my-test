@@ -1,0 +1,28 @@
+<div class="main-slider">
+  <div class="container">
+    <div
+      class="slide"
+      *ngFor="let slide of slides; let i = index"
+      [class.active]="i === currentIndexValue"
+      [class.slide-left]="i === nextIndexValue"
+      [class.slide-right]="i !== currentIndexValue && i !== nextIndexValue"
+    >
+      <div class="text">
+        <h2 class="title" [innerHTML]="slide.title"></h2>
+        <p class="description">{{ slide.description }}</p>
+      </div>
+      <div class="image-wrapper">
+        <img class="slide-image" [src]="slide.image" [alt]="slide.title" />
+      </div>
+    </div>
+
+    <div class="dots">
+      <span
+        *ngFor="let slide of slides; let i = index"
+        [class.active]="i === currentIndexValue"
+        (click)="goToSlide(i)"
+      >
+      </span>
+    </div>
+  </div>
+</div>
