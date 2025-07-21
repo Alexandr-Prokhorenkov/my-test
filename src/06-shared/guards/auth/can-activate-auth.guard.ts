@@ -1,5 +1,6 @@
-import { CanActivateFn } from '@angular/router';
+import { inject } from '@angular/core';
+import { CanActivateFn, Router } from '@angular/router';
 
 export const canActivateAuthGuard: CanActivateFn = () => {
-  return true;
+  return inject(Router).createUrlTree(['/login']);
 };

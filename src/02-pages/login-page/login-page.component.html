@@ -1,0 +1,63 @@
+<div class="login-page">
+  <div class="login-page-center">
+    <div class="login-page-wrapper">
+      <div class="system-logo-wrapper">
+        <img src="/assets/images/kip-kompas-logo.png" alt="Logo" class="system-logo" />
+        <h1 class="title">КИП «Компас»</h1>
+      </div>
+      <div class="login-form-wrapper">
+        <form action="" class="login-form" [formGroup]="form" (ngSubmit)="onSubmit($event)">
+          <div class="input-wrapper">
+            <label for="username" class="lable-text">Введите имя</label>
+            <div class="input-icon-wrapper" [ngClass]="{ 'has-error': usernameError }">
+              <input
+                placeholder="Name"
+                formControlName="username"
+                id="username"
+                type="text"
+                class="input"
+              />
+              <div class="icon-wrapper">
+                <app-svg-icon name="user-icon" class="input-icon" />
+              </div>
+            </div>
+            @if (usernameError) {
+              <div class="validation-error">
+                {{ usernameError }}
+              </div>
+            }
+          </div>
+          <div class="input-wrapper">
+            <label for="name" class="lable-text">Введите пароль</label>
+            <div class="input-icon-wrapper" [ngClass]="{ 'has-error': passwordError }">
+              <input
+                placeholder="Password"
+                formControlName="password"
+                id="password"
+                [type]="passwordVisible ? 'text' : 'password'"
+                class="input"
+              />
+              <div
+                class="icon-wrapper visible"
+                (click)="togglePasswordVisibility()"
+                [ngClass]="{ 'visibility-wrapper': passwordVisible }"
+              >
+                @if (passwordVisible) {
+                  <app-svg-icon name="visibility" class="input-icon" />
+                } @else {
+                  <app-svg-icon name="visibility-off" class="input-icon" />
+                }
+              </div>
+            </div>
+            @if (passwordError) {
+              <div class="validation-error">
+                {{ passwordError }}
+              </div>
+            }
+          </div>
+          <button type="submit" class="btn" [disabled]="form.invalid">Войти в аккаунт</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

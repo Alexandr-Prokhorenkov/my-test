@@ -6,6 +6,7 @@ export * from './foreign-military-equipment-page';
 export * from './foreign-software-page';
 export * from './instrumentation-page';
 export * from './layout-page';
+export * from './login-page';
 export * from './main-page';
 export * from './materials-page';
 export * from './news-page';

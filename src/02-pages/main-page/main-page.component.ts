@@ -1,12 +1,15 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { MainSliderComponent } from '@widgets/main-slider';
+import { MAIN_SLIDER_DATA } from '@shared/config';
+import { SliderComponent } from '@shared/ui';
 
 @Component({
   selector: 'app-main-page',
   standalone: true,
-  imports: [MainSliderComponent],
+  imports: [SliderComponent],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MainPageComponent {}
+export class MainPageComponent {
+  public readonly sliderData = MAIN_SLIDER_DATA;
+}

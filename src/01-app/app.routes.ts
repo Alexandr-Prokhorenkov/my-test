@@ -8,6 +8,7 @@ import {
   ForeignSoftwarePageComponent,
   InstrumentationPageComponent,
   LayoutPageComponent,
+  LoginPageComponent,
   MainPageComponent,
   MaterialsPageComponent,
   NewsPageComponent,
@@ -57,5 +58,9 @@ export const routes: Routes = [
       { path: 'user', component: UserPageComponent },
     ],
     canActivate: [canActivateAuthGuard],
+  },
+  {
+    path: 'login',
+    component: LoginPageComponent,
   },
 ];

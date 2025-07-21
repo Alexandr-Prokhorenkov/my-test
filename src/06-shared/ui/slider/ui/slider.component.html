@@ -1,0 +1,43 @@
+<div class="main-slider">
+  <div
+    class="container slider-content"
+    #sliderContainer
+    [class.drag-enabled]="enableDrag"
+    (mousedown)="onMouseDown($event)"
+    (touchstart)="onTouchStart($event)"
+    [class.dragging]="isDragging"
+  >
+    @if (slidesList.length > 0) {
+      @for (slide of slidesList; track $index) {
+        <div
+          class="slide"
+          [class.active]="$index === currentIndex"
+          [class.slide-left]="$index === nextIndex"
+          [class.slide-right]="$index !== currentIndex && $index !== nextIndex"
+          [style.transform]="transformsMap[$index] ?? null"
+        >
+          <div class="text">
+            <h2 class="title">{{ slide.title }}</h2>
+            <p class="description">{{ slide.description }}</p>
+          </div>
+
+          <div class="image-wrapper">
+            <img class="slide-image" [src]="slide.image" [alt]="slide.title" draggable="false" />
+          </div>
+        </div>
+      }
+
+      @if (slidesList.length > 1) {
+        <div class="dots">
+          @for (_ of slidesList; track $index) {
+            <span [class.active]="$index === currentIndex" (click)="goTo($index)"></span>
+          }
+        </div>
+      }
+    } @else {
+      <div class="no-slides">
+        <p>Нет доступных слайдов</p>
+      </div>
+    }
+  </div>
+</div>
